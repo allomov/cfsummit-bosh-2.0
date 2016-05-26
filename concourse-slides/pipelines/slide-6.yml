@@ -1,25 +1,25 @@
 ---
 resources:
 
-- name: "External CPI"
+- name: "Links"
   type: git
 
-- name: "UAA integration"
+- name: "Compiled Releases"
   type: git
 
-- name: "UAA integration"
+- name: "bosh.io/releases"
   type: git
 
 
 jobs:
-- name: "Many Other Features 2.0"
+- name: "Release 2.0"
   public: true
   plan:
   
-  - put: "External CPI"
+  - put: "Links"
   
-  - put: "UAA integration"
+  - put: "Compiled Releases"
   
-  - put: "UAA integration"
+  - put: "bosh.io/releases"
   
 

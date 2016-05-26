@@ -2,28 +2,40 @@
 slides:
 - title: BOSH 2.0
   bullets:
+  - text: "Docs 2.0"
   - text: "Release 2.0"
   - text: "Manifest 2.0"
   - text: "Stemcell 2.0"
-  - text: "Much More 2.0"
-- title: Release 2.0
-- title: Release 2.0
+  - text: "Much More 2.0s"
+- title: Docs 2.0
+- title: Docs 2.0
   bullets:
+  - text: "bosh.io"
+- title: Manifest 2.0
+- title: Manifest 2.0
+  bullets:
+  - text: "Cloud Config"
+  - text: "Better Naming!"
+  - text: "Config Server"
+  - text: "Property Validation"
   - text: "Links"
   - text: "Global Networking"
-  - text: "ssss"
+  - text: "Availability Zones"
+- title: Release 2.0
 - title: Release 2.0
   bullets:
   - text: "Links"
-  - text: "Links"
+  - text: "Compiled Releases"
+  - text: "bosh.io/releases"
 - title: Stemcell 2.0
 - title: Stemcell 2.0
   bullets:
-  - text: "Pipelines"
+  - text: "Build Pipelines"
+  - text: "Addons"
 - title: Many Other Features 2.0
   bullets:
   - text: "External CPI"
-  - text: "UAA integration"
-  - text: "UAA integration"
+  - text: "UAA Integration"
+  - text: "Dynamic Provisioning"
 - title: "Thank you"
   twitter: "Thank you all for coming to my BOSH 2.0 talk on #CloudFoundry #BOSHday! Now lets grab some lunch!!!"

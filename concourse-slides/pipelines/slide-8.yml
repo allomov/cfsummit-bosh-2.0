@@ -1,10 +1,20 @@
 ---
 resources:
 
+- name: "Build Pipelines"
+  type: git
+
+- name: "Addons"
+  type: git
+
 
 jobs:
-- name: "This Is The End"
+- name: "Stemcell 2.0"
   public: true
   plan:
+  
+  - put: "Build Pipelines"
+  
+  - put: "Addons"
   
 

@@ -1,25 +1,15 @@
 ---
 resources:
 
-- name: "Links"
-  type: git
-
-- name: "Global Networking"
-  type: git
-
-- name: "ssss"
+- name: "bosh.io"
   type: git
 
 
 jobs:
-- name: "Release 2.0"
+- name: "Docs 2.0"
   public: true
   plan:
   
-  - put: "Links"
-  
-  - put: "Global Networking"
-  
-  - put: "ssss"
+  - put: "bosh.io"
   
 

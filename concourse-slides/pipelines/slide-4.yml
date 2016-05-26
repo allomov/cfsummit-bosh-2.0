@@ -1,10 +1,45 @@
 ---
 resources:
 
+- name: "Cloud Config"
+  type: git
+
+- name: "Better Naming!"
+  type: git
+
+- name: "Config Server"
+  type: git
+
+- name: "Property Validation"
+  type: git
+
+- name: "Links"
+  type: git
+
+- name: "Global Networking"
+  type: git
+
+- name: "Availability Zones"
+  type: git
+
 
 jobs:
-- name: "Stemcell 2.0"
+- name: "Manifest 2.0"
   public: true
   plan:
+  
+  - put: "Cloud Config"
+  
+  - put: "Better Naming!"
+  
+  - put: "Config Server"
+  
+  - put: "Property Validation"
+  
+  - put: "Links"
+  
+  - put: "Global Networking"
+  
+  - put: "Availability Zones"
   
 
