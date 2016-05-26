@@ -3,7 +3,7 @@ resources:
 
 
 jobs:
-- name: "Release 2.0"
+- name: "Stemcell 2.0"
   public: true
   plan:
   

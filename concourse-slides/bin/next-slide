@@ -2,20 +2,23 @@
 
 project_folder  = File.expand_path(File.join(File.dirname(__FILE__), ".."))
 
-slide_number_file = "slide-number"
-slide_number = File.exist?(slide_number_file) ? File.read(slide_number_file).to_i : 0
+slide_number_file = File.join(project_folder, "slide-number")
+slide_number = File.exist?(slide_number_file) ? File.read(slide_number_file).to_i : -1
 
 pipeline_name = "bosh-presentation"
 fly_target = "tutorial"
 
 slide_number = slide_number + 1
 
-new_slide_file = "pipelines/slide-#{slide_number}.yml"
+new_slide_file = File.join(project_folder, "pipelines/slide-#{slide_number}.yml")
 
 if File.exist?(new_slide_file)
   Dir.chdir(project_folder) do
     `fly set-pipeline -n -t #{fly_target} -c pipelines/slide-#{slide_number}.yml -p #{pipeline_name} --load-vars-from secrets.yml`
   end
+  File.open(slide_number_file, "w") { |file| file.write(slide_number) }
 else
   `fly unpause-pipeline -t #{fly_target} -p #{pipeline_name}`
 end
+
+

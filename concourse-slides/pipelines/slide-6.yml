@@ -1,0 +1,25 @@
+---
+resources:
+
+- name: "External CPI"
+  type: git
+
+- name: "UAA integration"
+  type: git
+
+- name: "UAA integration"
+  type: git
+
+
+jobs:
+- name: "Many Other Features 2.0"
+  public: true
+  plan:
+  
+  - put: "External CPI"
+  
+  - put: "UAA integration"
+  
+  - put: "UAA integration"
+  
+

@@ -1,0 +1,20 @@
+---
+resources:
+
+- name: "Links"
+  type: git
+
+- name: "Links"
+  type: git
+
+
+jobs:
+- name: "Release 2.0"
+  public: true
+  plan:
+  
+  - put: "Links"
+  
+  - put: "Links"
+  
+

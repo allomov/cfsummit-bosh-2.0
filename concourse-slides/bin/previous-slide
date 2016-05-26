@@ -11,12 +11,13 @@ fly_target = "tutorial"
 slide_number = slide_number - 1
 slide_number = 0 if slide_number < 0
 
-new_slide_file = "pipelines/slide-#{slide_number}.yml"
+new_slide_file = File.join(project_folder, "pipelines/slide-#{slide_number}.yml")
 
 if File.exist?(new_slide_file)
   Dir.chdir(project_folder) do
     `fly set-pipeline -n -t #{fly_target} -c pipelines/slide-#{slide_number}.yml -p #{pipeline_name} --load-vars-from secrets.yml`
   end
+  File.open(slide_number_file, "w") { |file| file.write(slide_number) }
 else
   `fly unpause-pipeline -t #{fly_target} -p #{pipeline_name}`
 end

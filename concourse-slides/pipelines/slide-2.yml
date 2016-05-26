@@ -1,0 +1,25 @@
+---
+resources:
+
+- name: "Links"
+  type: git
+
+- name: "Global Networking"
+  type: git
+
+- name: "ssss"
+  type: git
+
+
+jobs:
+- name: "Release 2.0"
+  public: true
+  plan:
+  
+  - put: "Links"
+  
+  - put: "Global Networking"
+  
+  - put: "ssss"
+  
+

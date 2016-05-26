@@ -1,0 +1,15 @@
+---
+resources:
+
+- name: "Pipelines"
+  type: git
+
+
+jobs:
+- name: "Stemcell 2.0"
+  public: true
+  plan:
+  
+  - put: "Pipelines"
+  
+

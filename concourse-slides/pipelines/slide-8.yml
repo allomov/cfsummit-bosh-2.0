@@ -3,7 +3,7 @@ resources:
 
 
 jobs:
-- name: "Release 2.0"
+- name: "This Is The End"
   public: true
   plan:
   

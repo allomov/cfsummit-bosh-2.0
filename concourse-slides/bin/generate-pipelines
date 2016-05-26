@@ -22,7 +22,7 @@ slides_config["slides"].each_with_index do |slide, index|
   slide_bullets = slide['bullets'] || []
   twitter_message = 
   slide_data = { title: slide["title"], bullets: slide_bullets, twitter: twitter_message }
-  template = common_template[]
+  # template = common_template
   rendered_slide = ErbRenderer.new(slide_data).render(common_template)
   File.write(File.join(pipeline_folder,"slide-#{index}.yml"), rendered_slide)
 end
