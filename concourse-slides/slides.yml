@@ -1,8 +1,33 @@
 ---
 slides:
+- title: BOSH 2.0
+  bullets:
+  - text: "Release 2.0"
+  - text: "Manifest 2.0"
+  - text: "Stemcell 2.0"
+  - text: "Much More 2.0"
 - title: Release 2.0
-  # bullets:
-  # - text: "Links"
+- title: Release 2.0
+  bullets:
+  - text: "Links"
+  - text: "Global Networking"
+  - text: "Links"
+- title: Stemcell 2.0
+- title: Stemcell 2.0
+  bullets:
+  - text: "Links"
+  - text: "Links"
+  - text: "Links"
 - title: Manifest 2.0
   bullets:
   - text: "Links"
+  - text: "Links"
+- title: Many Other Features 2.0
+  bullets:
+  - text: "External CPI"
+  - text: "UAA integration"
+  - text: "UAA integration"
+- title: "Thank you"
+  twitter: "Thank you all for coming to my BOSH 2.0 talk on #CloudFoundry #BOSHday! Now lets grab some lunch!!!"
+- title: "This Is The End"
+  twitter: "You can find slides for my presentation for #CloudFoundry #BOSHday here: .."

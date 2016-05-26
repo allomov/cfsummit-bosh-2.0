@@ -1,0 +1,15 @@
+---
+resources:
+
+- name: "Links"
+  type: git
+
+
+jobs:
+- name: "Manifest 2.0"
+  public: true
+  plan:
+  
+  - put: "Links"
+  
+
