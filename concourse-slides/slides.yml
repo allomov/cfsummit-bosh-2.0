@@ -11,17 +11,15 @@ slides:
   bullets:
   - text: "Links"
   - text: "Global Networking"
+  - text: "ssss"
+- title: Release 2.0
+  bullets:
+  - text: "Links"
   - text: "Links"
 - title: Stemcell 2.0
 - title: Stemcell 2.0
   bullets:
-  - text: "Links"
-  - text: "Links"
-  - text: "Links"
-- title: Manifest 2.0
-  bullets:
-  - text: "Links"
-  - text: "Links"
+  - text: "Pipelines"
 - title: Many Other Features 2.0
   bullets:
   - text: "External CPI"

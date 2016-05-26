@@ -8,7 +8,8 @@ slide_number = File.exist?(slide_number_file) ? File.read(slide_number_file).to_
 pipeline_name = "bosh-presentation"
 fly_target = "tutorial"
 
-slide_number = slide_number + 1
+slide_number = slide_number - 1
+slide_number = 0 if slide_number < 0
 
 new_slide_file = "pipelines/slide-#{slide_number}.yml"
 
