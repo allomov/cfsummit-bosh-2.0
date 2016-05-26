@@ -1,0 +1,15 @@
+---
+resources:
+<% bullets.each do |bullet| %>
+- name: <%= bullet["text"] %>
+  type: git
+<% end -%>
+
+jobs:
+- name: "<%= title %>"
+  public: true
+  plan:
+  <% bullets.each do |bullet| %>
+  - put: <%= bullet["text"] %>
+  <% end -%>
+

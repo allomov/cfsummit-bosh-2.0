@@ -1,1 +1,29 @@
-generate-pipelines
+#!/usr/bin/env ruby
+require "yaml"
+require "erb"
+require "ostruct"
+
+# require ""
+
+project_folder  = File.expand_path(File.join(File.dirname(__FILE__), ".."))
+pipeline_folder = File.join(project_folder, "pipelines")
+template_folder = File.join(project_folder, "templates")
+
+slides_config_file = File.join(project_folder, "slides.yml")
+slides_config = YAML.load_file(slides_config_file)
+
+template = File.read(File.join(pipeline_folder, "pipeline-template.yml.erb"))
+
+class ErbRenderer < OpenStruct
+  def render(template)
+    ERB.new(template).result(binding)
+  end
+end
+
+slides_config["slides"].each_with_index do |slide, index|
+  slide_bullets = slide['bullets']
+  slide_bullets ||= Array.new	
+  slide_data = { title: slide["title"], bullets: slide_bullets }
+  rendered_slide = ErbRenderer.new(slide_data).render(template)
+  File.write(File.join(pipeline_folder,"slides-#{index}.yml"), rendered_slide)
+end
